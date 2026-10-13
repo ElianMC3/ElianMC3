@@ -1,16 +1,100 @@
-## Hi there 👋
+<div align="center">
 
-<!--
-**ElianMC3/ElianMC3** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+<!-- NAME / TAGLINE - animated typing -->
+<a href="https://github.com/ElianMC3">
+  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=26&duration=2600&pause=900&color=AA9BEF&center=true&vCenter=true&width=880&lines=Elian+Medina+Cobos;Full-Stack+Developer+%7C+AWS+%7C+AI;Software+Engineering+Student;Building+real+products+and+shipping+them" alt="typing banner">
+</a>
 
-Here are some ideas to get you started:
+<br>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<!-- SOCIALS -->
+<a href="https://github.com/ElianMC3"><img src="https://img.shields.io/badge/GitHub-0d1117?style=for-the-badge&logo=github&logoColor=aa9bef" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="mailto:elianmedinacobos@gmail.com"><img src="https://img.shields.io/badge/Gmail-0d1117?style=for-the-badge&logo=gmail&logoColor=aa9bef" alt="Email"></a>
+
+<br>
+
+<img src="https://komarev.com/ghpvc/?username=ElianMC3&style=flat&color=aa9bef&label=profile+views" alt="profile views">
+
+</div>
+
+---
+
+## This is me :)
+
+Hi, I'm **Elian**, full-stack developer and software engineering student, broadcasting from Veracruz, México 🇲🇽.
+I build full-stack applications, deploy them on **AWS** and plug **AI** into them so real people can actually use them.
+
+- 🎓 **Software Engineering student** at Universidad Tecnológica del Centro de Veracruz — *Ingeniería en Desarrollo y Gestión de Software* (2025 – presente).
+- 💼 **Software Developer Intern at 7D Construction** (Chicago): built a responsive web app, migrated manual Excel workflows to the cloud and ran the production environment on **AWS EC2**, improving field-to-office communication by **84%**.
+- 🏆 **AutiSense** — AI-powered screening platform for early autism detection in infants. Awarded the **state pass at ExpoCiencias Xalapa 2026**.
+- 🏋️ **Osmio** — full-stack sports & nutrition tracker with automated progressive-overload and dynamic macronutrient algorithms.
+- ☁️ **AWS certified** (DevOps + Lambda) and currently deep into **AI agents** through the **Model Context Protocol (MCP)**.
+- 💬 Talk to me about **full-stack, AWS or applied AI** and you'll have my full attention.
+
+<br>
+
+<div align="center">
+
+## my perfect stack
+
+<img src="https://skillicons.dev/icons?i=js,ts,java,python,mysql,react,angular,ionic,nodejs,express,aws,docker,git,github,linux&perline=8" alt="tech stack">
+
+</div>
+
+---
+
+<div align="center">
+
+## things I've shipped
+
+<table>
+<tr>
+<td width="50%" valign="top">
+
+### 🏆 AutiSense
+AI web platform for early autism detection in infants.
+End-to-end data pipelines and interactive clinical data collection.
+
+<sub>`Python` · `AI/ML` · `REST APIs`</sub>
+
+</td>
+<td width="50%" valign="top">
+
+### 🏋️ Osmio
+Full-stack sports & nutrition tracker.
+Automated load progression plus a dynamic macronutrient calculator.
+
+<sub>`React` · `Node.js` · `Full-Stack`</sub>
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### 🏗️ 7D Construction
+Cloud platform that replaced manual Excel workflows.
+Responsive web app on AWS EC2 for field and office teams.
+
+<sub>`AWS EC2` · `Responsive Web` · `REST APIs`</sub>
+
+</td>
+<td width="50%" valign="top">
+
+### 📜 Certifications
+DevOps on AWS · AWS Lambda Foundations · Cisco Switching, Routing & Wireless Essentials · Intro to Model Context Protocol (MCP).
+
+<sub>`AWS` · `Cisco` · `Claude Academy`</sub>
+
+</td>
+</tr>
+</table>
+
+</div>
+
+---
+
+<div align="center">
+
+<sub>` Build with love · @ElianMC3 `</sub>
+
+</div>
