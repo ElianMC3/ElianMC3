@@ -80,48 +80,48 @@ def make_logos() -> dict[str, Image.Image]:
     size = 400
     logos: dict[str, Image.Image] = {}
 
-    # Rust-inspired gear: twelve teeth, heavy annulus, and hub cutout.
-    rust = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(rust)
-    center = np.array([200.0, 200.0])
-    outer: list[tuple[float, float]] = []
-    for tooth in range(12):
-        base = tooth * math.tau / 12
-        for offset, radius in [
-            (-0.42, 150), (-0.30, 178), (0.30, 178), (0.42, 150)
-        ]:
-            a = base + offset * math.tau / 12
-            outer.append(tuple(center + radius * np.array([math.cos(a), math.sin(a)])))
-    d.polygon(outer, fill="black")
-    d.ellipse((70, 70, 330, 330), fill="black")
-    d.ellipse((128, 128, 272, 272), fill=(0, 0, 0, 0))
-    d.ellipse((174, 174, 226, 226), fill="black")
-    logos["react"] = rust
+    cx, cy = 200.0, 200.0
 
-    # </> mark built from broad, rounded strokes.
-    code = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(code)
-    stroke = 42
-    d.line([(154, 95), (66, 200), (154, 305)], fill="black", width=stroke, joint="curve")
-    d.line([(246, 95), (334, 200), (246, 305)], fill="black", width=stroke, joint="curve")
-    d.line([(225, 72), (174, 328)], fill="black", width=stroke)
-    logos["aws"] = code
+    def orbit(angle_deg: float, rx: float, ry: float, steps: int = 180):
+        a = math.radians(angle_deg)
+        pts = []
+        for i in range(steps + 1):
+            t = math.tau * i / steps
+            x = rx * math.cos(t)
+            y = ry * math.sin(t)
+            pts.append((cx + x * math.cos(a) - y * math.sin(a),
+                        cy + x * math.sin(a) + y * math.cos(a)))
+        return pts
 
-    # Stellar-inspired four-point star with a small connected node network.
-    stellar = Image.new("RGBA", (size, size), (0, 0, 0, 0))
-    d = ImageDraw.Draw(stellar)
-    star: list[tuple[float, float]] = []
-    for i in range(16):
-        a = -math.pi / 2 + i * math.pi / 8
-        radius = 137 if i % 4 == 0 else (45 if i % 2 == 0 else 25)
-        star.append((200 + math.cos(a) * radius, 200 + math.sin(a) * radius))
-    d.polygon(star, fill="black")
-    nodes = [(82, 112), (322, 106), (326, 300), (88, 316)]
-    for a, b in zip(nodes, nodes[1:] + nodes[:1]):
-        d.line([a, b], fill="black", width=12)
-    for x, y in nodes:
-        d.ellipse((x - 19, y - 19, x + 19, y + 19), fill="black")
-    logos["node"] = stellar
+    # React-inspired atom: three rotated orbits around a central nucleus.
+    react = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(react)
+    for angle in (0, 60, 120):
+        d.line(orbit(angle, 158, 56), fill="black", width=22, joint="curve")
+    d.ellipse((cx - 30, cy - 30, cx + 30, cy + 30), fill="black")
+    logos["react"] = react
+
+    # AWS-inspired cloud silhouette.
+    aws = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(aws)
+    d.ellipse((66, 190, 232, 322), fill="black")
+    d.ellipse((148, 128, 304, 292), fill="black")
+    d.ellipse((246, 184, 342, 316), fill="black")
+    d.rounded_rectangle((66, 244, 342, 332), radius=44, fill="black")
+    logos["aws"] = aws
+
+    # Node-inspired hexagon badge: thick hex ring.
+    node = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    d = ImageDraw.Draw(node)
+
+    def hexagon(radius: float):
+        return [(cx + radius * math.cos(math.radians(60 * i - 30)),
+                 cy + radius * math.sin(math.radians(60 * i - 30)))
+                for i in range(6)]
+
+    d.polygon(hexagon(172), fill="black")
+    d.polygon(hexagon(120), fill=(0, 0, 0, 0))
+    logos["node"] = node
 
     for name, image in logos.items():
         image.save(LOGOS / f"{name}.png", optimize=True)
@@ -264,9 +264,9 @@ def render_svg(
     t = THEMES[theme_name]
     n = min(TRAVELLER_COUNT, len(portrait))
     source = portrait[rng.choice(len(portrait), n, replace=False)]
-    rust = transport(source, logo_points["react"][:n])
-    code = transport(rust, logo_points["aws"][:n])
-    stellar = transport(code, logo_points["node"][:n])
+    react = transport(source, logo_points["react"][:n])
+    aws = transport(react, logo_points["aws"][:n])
+    node = transport(aws, logo_points["node"][:n])
 
     # Explicit uneven phase boundaries: 3.0 portrait, 2.0 per logo,
     # and four 1.3 transitions = 14.2 seconds.
@@ -274,7 +274,7 @@ def render_svg(
     key_times = ";".join(num(v / LOOP_SECONDS) for v in times)
     # Returning each traveller to its exact starting portrait coordinate keeps
     # the repeat boundary seamless. All logo-to-logo morphs use optimal transport.
-    frames = [source, source, rust, rust, code, code, stellar, stellar, source]
+    frames = [source, source, react, react, aws, aws, node, node, source]
     opacity_values = "0;0;1;1;1;1;1;1;0"
 
     parts: list[str] = [
@@ -283,7 +283,7 @@ def render_svg(
         'aria-labelledby="title desc">',
         "<title id=\"title\">Emmi's live system profile</title>",
         '<desc id="desc">Animated terminal profile with a dithered portrait and '
-        "Rust, code, and Stellar silhouettes.</desc>",
+        "React, AWS, and Node silhouettes.</desc>",
         "<defs>",
         '<filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">'
         f'<feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="{t["shadow"]}" '
@@ -321,8 +321,8 @@ def render_svg(
         '<g opacity="1">',
     ]
 
-    # Dense portrait drift: 94 independently noisy bands moving toward Rust's centroid.
-    rust_centroid = rust.mean(axis=0)
+    # Dense portrait drift: 94 independently noisy bands moving toward React's centroid.
+    react_centroid = react.mean(axis=0)
     band_ids = rng.integers(0, 94, size=len(portrait))
     noise = rng.normal(0, 4, size=(94, 2))
     for band in range(94):
@@ -330,7 +330,7 @@ def render_svg(
         if not len(pts):
             continue
         centroid = pts.mean(axis=0)
-        delta = (rust_centroid - centroid) * 0.18 + noise[band]
+        delta = (react_centroid - centroid) * 0.18 + noise[band]
         d = point_path(pts)
         parts.append(
             f'<path d="{d}" fill="none" stroke="{t["portrait"]}" stroke-width="1" '
