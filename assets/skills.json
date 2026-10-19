@@ -1,0 +1,13 @@
+{
+  "title": "Skill Radar",
+  "_comment": "Self-rated, 0-100. Edit these and the Charts workflow redraws the radar.",
+  "axes": [
+    { "label": "Full-Stack (JS/TS)",     "value": 88 },
+    { "label": "React / Angular / Ionic", "value": 86 },
+    { "label": "Node.js / Express",       "value": 85 },
+    { "label": "Python / AI",             "value": 80 },
+    { "label": "AWS (EC2 / Lambda)",      "value": 78 },
+    { "label": "Docker / DevOps",         "value": 75 },
+    { "label": "SQL / Bases de datos",    "value": 75 }
+  ]
+}
