@@ -6,7 +6,7 @@ Replaces github-readme-stats / github-profile-trophy / streak-stats, which are
 shared public instances that go down (503), run out of quota (402) or time out.
 These are files in your own repo, so they render as long as GitHub renders.
 
-    python scripts/cards.py --user emmi-lili --out assets
+    python scripts/cards.py --user ElianMC3 --out assets
 
 Writes <out>/card-stats-{dark,light}.svg plus one card per repo listed in
 assets/projects.json, as <out>/card-<repo>-{dark,light}.svg.
@@ -33,14 +33,14 @@ UA = {"User-Agent": "cards.py"}
 
 THEMES = {
     "dark": {
-        "bg": "#0d1117", "border": "#30363d", "title": "#aa9bef",
-        "text": "#c9d1d9", "muted": "#8b949e", "value": "#e6edf3",
-        "accent": "#aa9bef",
+        "bg": "#000000", "border": "#333333", "title": "#B3475C",
+        "text": "#B3B3B3", "muted": "#8B8B8B", "value": "#FFFFFF",
+        "accent": "#B3475C",
     },
     "light": {
-        "bg": "#ffffff", "border": "#d0d7de", "title": "#1a7f37",
-        "text": "#1f2328", "muted": "#57606a", "value": "#1f2328",
-        "accent": "#1a7f37",
+        "bg": "#FFFFFF", "border": "#D9D9D9", "title": "#800020",
+        "text": "#000000", "muted": "#6B6B6B", "value": "#000000",
+        "accent": "#800020",
     },
 }
 

@@ -48,28 +48,28 @@ ROWS = [
 
 THEMES = {
     "dark": {
-        "bg": "#0A101F",
-        "panel": "#0D1628",
-        "panel2": "#101B30",
-        "line": "#25344C",
-        "muted": "#8291A8",
-        "text": "#DDE7F5",
-        "portrait": "#AA9BEF",
-        "chrome": "#22D3EE",
-        "accent": "#10B981",
-        "shadow": "#02050B",
+        "bg": "#000000",
+        "panel": "#0A0A0A",
+        "panel2": "#141414",
+        "line": "#333333",
+        "muted": "#B3B3B3",
+        "text": "#FFFFFF",
+        "portrait": "#FFFFFF",
+        "chrome": "#B3475C",
+        "accent": "#B3475C",
+        "shadow": "#000000",
     },
     "light": {
-        "bg": "#F6F8FA",
+        "bg": "#FFFFFF",
         "panel": "#FFFFFF",
-        "panel2": "#EDF3F7",
-        "line": "#CBD7E1",
-        "muted": "#64748B",
-        "text": "#172033",
-        "portrait": "#4A3D7A",
-        "chrome": "#0891B2",
-        "accent": "#10B981",
-        "shadow": "#AAB7C4",
+        "panel2": "#F7F7F7",
+        "line": "#D9D9D9",
+        "muted": "#6B6B6B",
+        "text": "#000000",
+        "portrait": "#000000",
+        "chrome": "#800020",
+        "accent": "#800020",
+        "shadow": "#CCCCCC",
     },
 }
 
@@ -298,12 +298,12 @@ def render_svg(
         f'<rect x="13" y="13" width="1154" height="584" rx="13" fill="{t["panel"]}" '
         f'stroke="{t["line"]}" filter="url(#shadow)"/>',
         f'<path d="M13 62H1167" stroke="{t["line"]}"/>',
-        '<circle cx="38" cy="38" r="6" fill="#FF5F57"/>'
-        '<circle cx="59" cy="38" r="6" fill="#FEBC2E"/>'
-        '<circle cx="80" cy="38" r="6" fill="#28C840"/>',
+        '<circle cx="38" cy="38" r="6" fill="#800020"/>'
+        '<circle cx="59" cy="38" r="6" fill="#B3475C"/>'
+        '<circle cx="80" cy="38" r="6" fill="#D9D9D9"/>',
         f'<text x="590" y="43" text-anchor="middle" fill="{t["muted"]}" '
         'font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" '
-        'letter-spacing=".4">profile.sh --live</text>',
+        'letter-spacing=".4">elian.sh --live</text>',
         # Left visual frame.
         f'<rect x="35" y="88" width="418" height="472" rx="6" fill="{t["panel2"]}" '
         f'stroke="{t["line"]}"/>',
@@ -390,17 +390,17 @@ def render_svg(
             'font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="13" '
             'font-weight="700" letter-spacing="1.2">SYSTEM.INFO</text>',
             # LIVE badge and handle pill.
-            '<g filter="url(#glow)"><circle cx="915" cy="106" r="4" fill="#FF4D5A">'
+            '<g filter="url(#glow)"><circle cx="915" cy="106" r="4" fill="#B3475C">'
             '<animate attributeName="opacity" values="1;.3;1" dur="1.6s" repeatCount="indefinite"/>'
             '</circle></g>',
-            '<text x="927" y="111" fill="#FF4D5A" '
+            '<text x="927" y="111" fill="#B3475C" '
             'font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="12" '
             'font-weight="700">LIVE</text>',
             f'<rect x="982" y="94" width="146" height="24" rx="12" fill="{t["chrome"]}" opacity=".16" '
             f'stroke="{t["chrome"]}"/>',
             f'<text x="1055" y="111" text-anchor="middle" fill="{t["chrome"]}" '
             'font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="14" '
-            'font-weight="700">@emmi-lili</text>',
+            'font-weight="700">@ElianMC3</text>',
         ]
     )
 
@@ -434,7 +434,7 @@ def render_svg(
             "● ALL SYSTEMS NOMINAL</text>",
             f'<text x="1128" y="548" text-anchor="end" fill="{t["muted"]}" '
             'font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11">'
-            "UTC-4 · LATAM NODE</text>",
+            "UTC-6 · VERACRUZ NODE</text>",
             "</svg>",
         ]
     )
