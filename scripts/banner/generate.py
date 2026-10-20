@@ -18,7 +18,7 @@ from scipy.spatial.distance import cdist
 
 
 ROOT = Path(__file__).resolve().parents[2]
-SOURCE = ROOT / "assets/source/elian.png"
+SOURCE = ROOT / "assets/source/elii.png"
 ASSETS = ROOT / "assets"
 LOGOS = Path(__file__).resolve().parent / "logos"
 DATA = Path(__file__).resolve().parent / "data"
@@ -434,7 +434,7 @@ def render_svg(
             "● ALL SYSTEMS NOMINAL</text>",
             f'<text x="1128" y="548" text-anchor="end" fill="{t["muted"]}" '
             'font-family="ui-monospace,SFMono-Regular,Consolas,monospace" font-size="11">'
-            "UTC-6 · VERACRUZ NODE</text>",
+            "UTC-6 · PADELMA NODE</text>",
             "</svg>",
         ]
     )
