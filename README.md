@@ -18,8 +18,9 @@
 <br>
 
 <!-- SOCIALS -->
-<a href="https://github.com/ElianMC3"><img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub"></a>&nbsp;&nbsp;
 <a href="mailto:elianmedinacobos@gmail.com"><img src="https://img.shields.io/badge/Gmail-800020?style=for-the-badge&logo=gmail&logoColor=FFFFFF" alt="Email"></a>
+<a href="https://github.com/ElianMC3"><img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=FFFFFF" alt="GitHub"></a>&nbsp;&nbsp;
+<a href="https://www.instagram.com/elian.chair?exln=MWNtMXA4Mm4zcW5mNg%3D%3D&utm_source=qr"><img src="https://img.shields.io/badge/Instagram-800020?style=for-the-badge&logo=instagram&logoColor=FFFFFF" alt="Instagram">&nbsp;&nbsp;
 
 <br>
 
@@ -35,7 +36,7 @@ Hi, I'm **Elian**, full-stack developer and software engineering student, broadc
 I build full-stack applications, deploy them on AWS and plug AI into them so real people can actually use them.
 
 - 🎓 **Software Engineering student** at Universidad Tecnológica del Centro de Veracruz — *Ingeniería en Desarrollo y Gestión de Software* (2025 – presente).
-- 💼 **Software Developer Intern at 7D Construction** (Chicago): built a responsive web app, migrated manual Excel workflows to the cloud and ran the production environment on **AWS EC2**, improving field-to-office communication by **84%**.
+- 💼 **Software Developer Intern at 7D Construction** (Chicago, Illinois, USA): built a responsive web app, migrated manual Excel workflows to the cloud and ran the production environment on **AWS EC2**, improving field-to-office communication by **84%**.
 - 🏆 **AutiSense** — AI-powered screening platform for early autism detection in infants. Awarded the **state pass at ExpoCiencias Xalapa 2026**.
 - 🏋️ **Osmio** — full-stack sports & nutrition tracker with automated progressive-overload and dynamic macronutrient algorithms.
 - ☁️ **AWS certified** (DevOps + Lambda) and currently deep into **AI agents** through the **Model Context Protocol (MCP)**.
@@ -45,7 +46,7 @@ I build full-stack applications, deploy them on AWS and plug AI into them so rea
 
 <div align="center">
 
-## <font color="#800020">my perfect stack</font>
+## <font color="#800020">My stack</font>
 
 <img src="https://skillicons.dev/icons?i=js,ts,java,python,mysql,react,angular,ionic,nodejs,express,aws,docker,git,github,linux&perline=8" alt="tech stack">
 
